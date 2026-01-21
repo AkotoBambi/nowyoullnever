@@ -2,24 +2,60 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>nowyoullnever</title>
+  <title>Now You'll Never</title>
   <style>
     body {
+      margin: 0;
       font-family: sans-serif;
-      text-align: center;
-      margin-top: 40vh;
-    }
-    a {
-      display: block;
-      margin: 10px;
       color: black;
+    }
+
+    /* 사이트 제목 */
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 16px;
+    }
+
+    /* 중앙 카테고리 */
+    .center {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .center a {
+      margin: 8px 0;
       text-decoration: none;
+      color: black;
+    }
+
+    /* 하단 contact */
+    .contact {
+      margin-top: 40px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <a href="/text">text</a>
-  <a href="/image">image</a>
-  <a href="/sound">sound</a>
+
+  <div class="title">
+    Now You'll Never
+  </div>
+
+  <div class="center">
+    <a href="/about">about me</a>
+    <a href="/field-notes">field notes</a>
+    <a href="/image">image</a>
+    <a href="/text">personal text</a>
+
+    <div class="contact">
+      contact : jc1620@naver.com
+    </div>
+  </div>
+
 </body>
 </html>
