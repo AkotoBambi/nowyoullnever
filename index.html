@@ -6,21 +6,21 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: serif;
       color: black;
     }
 
     /* 사이트 제목 */
     .title {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 16px;
-    }
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  font-size: 16px;
+}
 
     /* 중앙 카테고리 */
     .center {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -33,9 +33,12 @@
       color: black;
     }
 
-    /* 하단 contact */
+    /* 맨 아래 contact */
     .contact {
-      margin-top: 40px;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
       font-size: 14px;
     }
   </style>
@@ -51,10 +54,10 @@
     <a href="/field-notes">field notes</a>
     <a href="/image">image</a>
     <a href="/text">personal text</a>
+  </div>
 
-    <div class="contact">
-      contact : jc1620@naver.com
-    </div>
+  <div class="contact">
+    contact : jc1620@naver.com
   </div>
 
 </body>
