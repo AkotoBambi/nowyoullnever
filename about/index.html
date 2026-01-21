@@ -12,10 +12,11 @@
 
     /* 사이트 제목 */
     .title {
-      position: absolute;
+      position: fixed;
       top: 50px;
       left: 40px;
       font-size: 16px;
+      z-index: 10;
     }
 
     .title a {
@@ -23,28 +24,52 @@
       color: black;
     }
 
-    /* 중앙 텍스트 */
-    .content {
+    /* 전체 레이아웃 */
+    .layout {
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 120px; /* 좌우 간격 */
+      padding: 120px 40px 80px;
+      box-sizing: border-box;
     }
 
-    .text {
-      max-width: 600px;
-      line-height: 1.6;
-      text-align: center;
+    /* 왼쪽 문장 */
+    .left {
+      width: 300px;
+      text-align: left;
       font-size: 15px;
     }
 
-    .text a {
+    /* 오른쪽 내용 */
+    .right {
+      max-width: 480px;
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .right a {
       color: black;
       text-decoration: none;
     }
 
-    .text a:hover {
+    .right a:hover {
       text-decoration: underline;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+      }
+
+      .left, .right {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -54,30 +79,39 @@
     <a href="/">Now You'll Never</a>
   </div>
 
-  <div class="content">
-    <div class="text">
-      plunderphonics / electronic musician.<br><br>
+  <div class="layout">
+
+    <div class="left">
+      <strong>plunderphonics / electronic musician.</strong>
+    </div>
+
+    <div class="right">
 
       <a href="https://nowyoullnever.bandcamp.com/">https://nowyoullnever.bandcamp.com/</a><br><br>
 
       <a href="https://www.youtube.com/@nowyoullnever">https://www.youtube.com/@nowyoullnever</a><br><br>
 
-      linktree : <a href="https://linktr.ee/nowyoullnever">https://linktr.ee/nowyoullnever</a><br><br>
+      <strong style="color:#9acd32;">linktree :</strong>
+      <a href="https://linktr.ee/nowyoullnever">https://linktr.ee/nowyoullnever</a><br><br>
 
-      instagram : <a href="https://www.instagram.com/nowyoullnever_">https://www.instagram.com/nowyoullnever_</a><br><br>
+      <strong style="color:#ff69b4;">instagram :</strong>
+      <a href="https://www.instagram.com/nowyoullnever_">https://www.instagram.com/nowyoullnever_</a><br><br>
 
-      twitter : <a href="https://x.com/nowyoullnever">https://x.com/nowyoullnever</a><br><br>
+      <strong style="color:#1da1f2;">twitter :</strong>
+      <a href="https://x.com/nowyoullnever">https://x.com/nowyoullnever</a><br><br><br>
 
-      Or some other stuffs :<br><br>
+      <strong>Other works :</strong><br><br>
 
       <a href="https://gainando.bandcamp.com/">https://gainando.bandcamp.com/</a><br><br>
 
-      <a href="https://avalanchemarkforever.bandcamp.com/">https://avalanchemarkforever.bandcamp.com/</a><br><br>
+      <a href="https://avalanchemarkforever.bandcamp.com/">https://avalanchemarkforever.bandcamp.com/</a><br><br><br>
 
-      Contact : jc1620@naver.com<br><br>
+      <strong>Contact :</strong> jc1620@naver.com<br><br>
 
       love you.
+
     </div>
+
   </div>
 
 </body>
